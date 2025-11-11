@@ -6,10 +6,10 @@ Defin<#
     Expects a CSV with the following columns:
         UserPrincipalName,Password
 
-    Example row:
+    .Example row:
         amurphy@nathanielmspencergmail.onmicrosoft.com,Xq7!vR9b#T2pLf8$
 
-    Requires:
+    .Requires:
         - Microsoft.Graph.Users module
         - Connect-MgGraph with appropriate permissions (e.g. User.ReadWrite.All)
 
