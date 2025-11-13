@@ -15,10 +15,6 @@
     Control: CIS 1.1.1
 #>
 
-1. Connect to Microsoft Graph using Connect-MgGraph -Scopes 
-"RoleManagement.Read.Directory","User.Read.All" 
-
-2. Run the following PowerShell script: 
 $DirectoryRoles = Get-MgDirectoryRole 
 # Get privileged role IDs 
 $PrivilegedRoles = $DirectoryRoles | Where-Object { 
@@ -35,5 +31,4 @@ OnPremisesSyncEnabled
 } 
 $PrivilegedUsers | Where-Object { $_.OnPremisesSyncEnabled -eq $true } |  
 ft DisplayName,UserPrincipalName,OnPremisesSyncEnabled 
-3. The script will output any hybrid users that are also members of privileged roles. 
-If nothing returns, then no users with that criteria exist. 
+
